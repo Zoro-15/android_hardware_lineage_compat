@@ -773,6 +773,48 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-lite-3.9.1-vendorcompat",
+    stem: "libprotobuf-cpp-lite-3.9.1",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    shared_libs: [
+        "libc++",
+    ],
+    target: {
+        android_arm: {
+            srcs: ["vndk/v29/arm/libprotobuf-cpp-lite.so"],
+        },
+        android_arm64: {
+            srcs: ["vndk/v29/arm64/libprotobuf-cpp-lite.so"],
+        },
+    },
+    compile_multilib: "both",
+}
+
+cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-full-3.9.1-vendorcompat",
+    stem: "libprotobuf-cpp-full-3.9.1",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    shared_libs: [
+        "libc++",
+    ],
+    target: {
+        android_arm: {
+            srcs: ["vndk/v29/arm/libprotobuf-cpp-full.so"],
+        },
+        android_arm64: {
+            srcs: ["vndk/v29/arm64/libprotobuf-cpp-full.so"],
+        },
+    },
+    compile_multilib: "both",
+}
+
+cc_prebuilt_library_shared {
     name: "libstagefright_foundation-v33",
     system_ext_specific: true,
     vendor_available: true,
