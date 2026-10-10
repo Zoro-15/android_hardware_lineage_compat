@@ -779,6 +779,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     shared_libs: [
         "libc++",
     ],
@@ -800,6 +801,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     shared_libs: [
         "libc++",
     ],
